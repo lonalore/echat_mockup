@@ -1,3 +1,8 @@
+#eChatModal .modal-dialog {
+    width: 100%;
+    max-width: 900px;
+}
+
 #eChatModal .close {
     font-size: 32px;
 }
@@ -7,13 +12,17 @@
     padding-bottom: 0;
 }
 
-#eChatModal .modal-body .col-xs-2,
+#eChatModal .modal-body .col-xs-2 {
+    padding: 0;
+}
+
 #eChatModal .modal-body .col-xs-10 {
     padding: 0;
 }
 
 #eChatModal .user-list-container {
     max-height: 500px;
+    overflow-x: hidden;
     overflow-y: scroll;
 }
 
@@ -23,7 +32,11 @@
 }
 
 #eChatModal .user-list li {
-    padding: 10px;
+    padding: 5px 15px 15px 15px;
+}
+
+#eChatModal .user-list li.active {
+    background-color: #18bc9c;
 }
 
 #eChatModal .user-list li img {
@@ -38,6 +51,12 @@
 
 #eChatModal .user-list li a {
     display: block;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+#eChatModal .user-list li.active a {
+    color: #ffffff;
 }
 
 #eChatModal .user-list li div {
@@ -49,20 +68,28 @@
     text-overflow: ellipsis;
 }
 
+#eChatModal .user-list li.active div {
+    color: #000000;
+}
+
 #eChatModal section {
-    max-height: 500px;
     width: 100%;
-    overflow-x: hidden;
+    max-height: 500px;
     overflow-y: scroll;
+    overflow-x: hidden;
     margin: 0 auto;
-    padding: 10px;
+    padding: 10px 10px 5px 10px;
 }
 
 #eChatModal section div {
-    max-width: 70%;
     word-wrap: break-word;
     margin-bottom: 10px;
     line-height: 24px;
+}
+
+#eChatModal section div.from-me,
+#eChatModal section div.from-them {
+    max-width: 70%;
 }
 
 #eChatModal section p {
@@ -70,17 +97,37 @@
     font-size: 14px;
 }
 
+#eChatModal .author-left {
+    float: left;
+    margin: 0 0 0 5px;
+    font-size: 0.75em;
+}
+
+#eChatModal .author-right {
+    float: right;
+    margin: 0 5px 0 0;
+    font-size: 0.75em;
+}
+
 #eChatModal section .clear {
     clear: both;
+    margin: 0;
+    padding: 0;
 }
 
 #eChatModal section .from-me {
     position: relative;
-    padding: 10px 20px;
+    padding: 5px 15px;
     color: white;
-    background: #0B93F6;
-    border-radius: 25px;
+    background: #18bc9c;
     float: right;
+
+    -webkit-border-radius: 15px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius: 15px;
+    -moz-border-radius-topright: 5px;
+    border-radius: 15px;
+    border-top-right-radius: 5px;
 }
 
 #eChatModal section .from-me:before {
@@ -90,7 +137,7 @@
     bottom: -2px;
     right: -7px;
     height: 20px;
-    border-right: 20px solid #0B93F6;
+    border-right: 20px solid #18bc9c;
     border-bottom-left-radius: 16px 14px;
     -webkit-transform: translate(0, -2px);
 }
@@ -110,11 +157,17 @@
 
 #eChatModal section .from-them {
     position: relative;
-    padding: 10px 20px;
+    padding: 5px 15px;
     background: #E5E5EA;
-    border-radius: 25px;
     color: black;
     float: left;
+
+    -webkit-border-radius: 15px;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius: 15px;
+    -moz-border-radius-topleft: 5px;
+    border-radius: 15px;
+    border-top-left-radius: 5px;
 }
 
 #eChatModal section .from-them:before {
@@ -140,4 +193,77 @@
     background: white;
     border-bottom-right-radius: 10px;
     -webkit-transform: translate(-30px, -2px);
+}
+
+#eChatModal section .message-toolbar,
+#eChatModal section .message-toolbar div {
+    margin: 0;
+    padding: 0;
+}
+
+#eChatModal section .message-toolbar a,
+#eChatModal section .message-toolbar a:visited,
+#eChatModal section .message-toolbar a:active,
+#eChatModal section .message-toolbar a:focus  {
+    font-size: 20px;
+    color: #777777;
+    text-decoration: none;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+#eChatModal section .message-toolbar a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: #0f0f0f;
+}
+
+#eChatModal section textarea {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+#eChatModal .settings-toolbar a,
+#eChatModal .settings-toolbar a:visited,
+#eChatModal .settings-toolbar a:active,
+#eChatModal .settings-toolbar a:focus {
+    font-size: 20px;
+    color: #777777;
+    text-decoration: none;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+#eChatModal .settings-toolbar a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: #0f0f0f;
+}
+
+#eChatModal .footer-copyright {
+    color: #777777;
+}
+
+@media (max-width: 767px) {
+    #eChatModal .user-list li {
+        padding: 3px;
+    }
+
+    #eChatModal .user-list li img {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+
+@media (max-width: 979px) {
+    #eChatModal {
+        padding: 0 0 0 0 !important;
+    }
+
+    #eChatModal .modal-dialog {
+        margin: 0 auto;
+    }
 }

@@ -38,7 +38,7 @@
                     <div class="col-xs-2 col-sm-4">
                         <div class="user-list-container">
                             <ul class="user-list">
-                                <li>
+                                <li class="active">
                                     <img src="images/user-profile-2.png" alt="George Clooney" width="50" height="50"/>
                                     <a class="hidden-xs" href="#">George Clooney</a>
                                     <div class="hidden-xs">How far would you go for a Nespresso?</div>
@@ -93,58 +93,139 @@
                     </div>
                     <div class="col-xs-10 col-sm-8">
                         <section class="message-container">
+                            <div class="author-right">You</div>
+                            <div class="clear"></div>
                             <div class="from-me">
                                 <p>Hey there! What's up?</p>
                             </div>
+                            <div class="clear"></div>
+
+                            <div class="author-left">George Clooney</div>
                             <div class="clear"></div>
                             <div class="from-them">
                                 <p>Checking out iOS7 you know..</p>
                             </div>
                             <div class="clear"></div>
+
+                            <div class="author-right">You</div>
+                            <div class="clear"></div>
                             <div class="from-me">
                                 <p>Check out this bubble!</p>
                             </div>
+                            <div class="clear"></div>
+
+                            <div class="author-left">George Clooney</div>
                             <div class="clear"></div>
                             <div class="from-them">
                                 <p>It's pretty cool!</p>
                             </div>
                             <div class="clear"></div>
+
+                            <div class="author-right">You</div>
+                            <div class="clear"></div>
                             <div class="from-me">
                                 <p>Yeah it's pure CSS & HTML</p>
                             </div>
                             <div class="clear"></div>
+
+                            <div class="author-left">George Clooney</div>
+                            <div class="clear"></div>
                             <div class="from-them">
                                 <p>Wow that's impressive. But what's even more impressive is that this bubble is really high.</p>
                             </div>
+                            <div class="clear"></div>
+
+                            <div class="author-right">You</div>
+                            <div class="clear"></div>
                             <div class="from-me">
                                 <p>Hey there! What's up?</p>
                             </div>
+                            <div class="clear"></div>
+
+                            <div class="author-left">George Clooney</div>
                             <div class="clear"></div>
                             <div class="from-them">
                                 <p>Checking out iOS7 you know..</p>
                             </div>
                             <div class="clear"></div>
+
+                            <div class="author-right">You</div>
+                            <div class="clear"></div>
                             <div class="from-me">
                                 <p>Check out this bubble!</p>
                             </div>
+                            <div class="clear"></div>
+
+                            <div class="author-left">George Clooney</div>
                             <div class="clear"></div>
                             <div class="from-them">
                                 <p>It's pretty cool!</p>
                             </div>
                             <div class="clear"></div>
+
+                            <div class="author-right">You</div>
+                            <div class="clear"></div>
                             <div class="from-me">
                                 <p>Yeah it's pure CSS & HTML</p>
                             </div>
                             <div class="clear"></div>
+
+                            <div class="author-left">George Clooney</div>
+                            <div class="clear"></div>
                             <div class="from-them">
                                 <p>Wow that's impressive. But what's even more impressive is that this bubble is really high.</p>
                             </div>
+                            <div class="clear"></div>
+
+                            <div class="message-toolbar">
+                                <div class="row">
+                                    <div class="col-xs-6 text-left">
+                                        <a href="JavaScript:void(0);" title="Smileys">
+                                            <i class="fa fa-smile-o" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="JavaScript:void(0);" title="Send an image">
+                                            <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="JavaScript:void(0);" title="Send a file">
+                                            <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 text-right">
+                                        <a href="JavaScript:void(0);" title="Export conversation">
+                                            <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="JavaScript:void(0);" title="Delete conversation">
+                                            <i class="fa fa-trash" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="JavaScript:void(0);" title="Settings">
+                                            <i class="fa fa-cogs" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <textarea class="message-input form-control" placeholder="your message"></textarea>
                         </section>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <small>Powered by eChat</small>
+                <div class="row">
+                    <div class="col-xs-6 text-left">
+                        <div class="settings-toolbar">
+                            <a href="JavaScript:void(0);" title="Turn chat on/off">
+                                <i class="fa fa-power-off" aria-hidden="true"></i>
+                            </a>
+                            <a href="JavaScript:void(0);" title="Volume settings">
+                                <i class="fa fa-volume-up" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <div class="footer-copyright">
+                            <small>Powered by eChat</small>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -195,11 +276,13 @@
     </div>
 </header>
 
-<!-- jQuery -->
+<!-- jQuery. -->
 <script type="text/javascript" src="vendor/jquery/jquery-2.2.4.min.js"></script>
-<!-- Bootstrap Core JavaScript -->
+<!-- Bootstrap Core JavaScript. -->
 <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!-- Custom JavaScript -->
+<!-- Automatically adjust textarea height based on user input. -->
+<script type="text/javascript" src="vendor/jquery.ns-autogrow/jquery.ns-autogrow.min.js"></script>
+<!-- Custom JavaScript. -->
 <script type="text/javascript" src="js/scripts.js"></script>
 
 </body>
