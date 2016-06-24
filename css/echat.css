@@ -1,10 +1,41 @@
+#eChatModal.in {
+    overflow: hidden;
+}
+
 #eChatModal .modal-dialog {
     width: 100%;
     max-width: 900px;
 }
 
+#eChatModal .user-list-container,
+#eChatModal .message-container {
+    max-height: 500px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+/* to make scrollbars always visible */
+#eChatModal .always-visible.ps-container > .ps-scrollbar-x-rail,
+#eChatModal .always-visible.ps-container > .ps-scrollbar-y-rail {
+    opacity: 0.6;
+}
+
+#eChatModal .modal-dialog.no-margin-top {
+    margin-top: 0 !important;
+}
+
+#eChatModal .modal-dialog.no-margin-left-right {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
 #eChatModal .close {
     font-size: 32px;
+}
+
+#eChatModal .modal-header {
+    padding: 5px 15px 5px 15px;
 }
 
 #eChatModal .modal-body {
@@ -21,9 +52,7 @@
 }
 
 #eChatModal .user-list-container {
-    max-height: 500px;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    padding-right: 15px;
 }
 
 #eChatModal .user-list {
@@ -72,50 +101,48 @@
     color: #000000;
 }
 
-#eChatModal section {
+#eChatModal .message-container {
     width: 100%;
-    max-height: 500px;
-    overflow-y: scroll;
-    overflow-x: hidden;
     margin: 0 auto;
-    padding: 10px 10px 5px 10px;
+    padding: 0 15px 0 5px;
+    border-left: 1px solid #cccccc;
 }
 
-#eChatModal section div {
+#eChatModal .message-container .messages {
     word-wrap: break-word;
     margin-bottom: 10px;
     line-height: 24px;
 }
 
-#eChatModal section div.from-me,
-#eChatModal section div.from-them {
+#eChatModal .message-container .messages .from-me,
+#eChatModal .message-container .messages .from-them {
     max-width: 70%;
 }
 
-#eChatModal section p {
+#eChatModal .message-container p {
     margin: 0;
     font-size: 14px;
 }
 
-#eChatModal .author-left {
+#eChatModal .message-container .author-left {
     float: left;
     margin: 0 0 0 5px;
     font-size: 0.75em;
 }
 
-#eChatModal .author-right {
+#eChatModal .message-container .author-right {
     float: right;
     margin: 0 5px 0 0;
     font-size: 0.75em;
 }
 
-#eChatModal section .clear {
+#eChatModal .message-container .clear {
     clear: both;
     margin: 0;
     padding: 0;
 }
 
-#eChatModal section .from-me {
+#eChatModal .message-container .from-me {
     position: relative;
     padding: 5px 15px;
     color: white;
@@ -130,7 +157,8 @@
     border-top-right-radius: 5px;
 }
 
-#eChatModal section .from-me:before {
+/*
+#eChatModal .message-container .from-me:before {
     content: "";
     position: absolute;
     z-index: 1;
@@ -142,7 +170,7 @@
     -webkit-transform: translate(0, -2px);
 }
 
-#eChatModal section .from-me:after {
+#eChatModal .message-container .from-me:after {
     content: "";
     position: absolute;
     z-index: 1;
@@ -154,8 +182,9 @@
     border-bottom-left-radius: 10px;
     -webkit-transform: translate(-30px, -2px);
 }
+*/
 
-#eChatModal section .from-them {
+#eChatModal .message-container .from-them {
     position: relative;
     padding: 5px 15px;
     background: #E5E5EA;
@@ -170,7 +199,8 @@
     border-top-left-radius: 5px;
 }
 
-#eChatModal section .from-them:before {
+/*
+#eChatModal .message-container .from-them:before {
     content: "";
     position: absolute;
     z-index: 2;
@@ -182,7 +212,7 @@
     -webkit-transform: translate(0, -2px);
 }
 
-#eChatModal section .from-them:after {
+#eChatModal .message-container .from-them:after {
     content: "";
     position: absolute;
     z-index: 3;
@@ -194,17 +224,18 @@
     border-bottom-right-radius: 10px;
     -webkit-transform: translate(-30px, -2px);
 }
+*/
 
-#eChatModal section .message-toolbar,
-#eChatModal section .message-toolbar div {
+#eChatModal .message-container .message-toolbar,
+#eChatModal .message-container .message-toolbar .no-margin-no-padding {
     margin: 0;
     padding: 0;
 }
 
-#eChatModal section .message-toolbar a,
-#eChatModal section .message-toolbar a:visited,
-#eChatModal section .message-toolbar a:active,
-#eChatModal section .message-toolbar a:focus  {
+#eChatModal .message-container .message-toolbar a,
+#eChatModal .message-container .message-toolbar a:visited,
+#eChatModal .message-container .message-toolbar a:active,
+#eChatModal .message-container .message-toolbar a:focus {
     font-size: 20px;
     color: #777777;
     text-decoration: none;
@@ -212,13 +243,13 @@
     margin-right: 3px;
 }
 
-#eChatModal section .message-toolbar a:hover {
+#eChatModal .message-container .message-toolbar a:hover {
     text-decoration: none;
     cursor: pointer;
     color: #0f0f0f;
 }
 
-#eChatModal section textarea {
+#eChatModal .message-container textarea {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
@@ -241,6 +272,10 @@
     color: #0f0f0f;
 }
 
+#eChatModal .modal-footer {
+    padding: 5px 15px 5px 15px;
+}
+
 #eChatModal .footer-copyright {
     color: #777777;
 }
@@ -255,6 +290,14 @@
         margin-left: auto;
         margin-right: auto;
         display: block;
+    }
+
+    #eChatModal .user-list-container {
+        padding-right: 0;
+    }
+
+    #eChatModal .message-container {
+        padding-right: 5px;
     }
 }
 

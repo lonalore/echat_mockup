@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
     <!-- Font-Awesome -->
     <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Perfect-Scrollbar CSS. -->
+    <link rel="stylesheet" href="vendor/perfect-scrollbar/css/perfect-scrollbar.min.css">
     <!-- CSS styles of website -->
     <link href="css/styles.css" rel="stylesheet">
     <!-- CSS styles for eChat Modal -->
@@ -25,18 +27,19 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
 
                 <div class="row">
                     <div class="col-xs-8 col-sm-4">
-                        <input class="form-control input-sm" name="search" value="" placeholder="search by name"/>
+                        <input class="search-input form-control input-sm" name="search" value="" placeholder="search by name"/>
                     </div>
                 </div>
             </div>
             <div class="modal-body">
                 <div class="row">
                     <div class="col-xs-2 col-sm-4">
-                        <div class="user-list-container">
+                        <div class="user-list-container always-visible">
                             <ul class="user-list">
                                 <li class="active">
                                     <img src="images/user-profile-2.png" alt="George Clooney" width="50" height="50"/>
@@ -92,112 +95,114 @@
                         </div>
                     </div>
                     <div class="col-xs-10 col-sm-8">
-                        <section class="message-container">
-                            <div class="author-right">You</div>
-                            <div class="clear"></div>
-                            <div class="from-me">
-                                <p>Hey there! What's up?</p>
-                            </div>
-                            <div class="clear"></div>
+                        <section class="message-container always-visible">
+                            <div class="messages">
+                                <div class="author-right">You</div>
+                                <div class="clear"></div>
+                                <div class="from-me">
+                                    <p>Hey there! What's up?</p>
+                                </div>
+                                <div class="clear"></div>
 
-                            <div class="author-left">George Clooney</div>
-                            <div class="clear"></div>
-                            <div class="from-them">
-                                <p>Checking out iOS7 you know..</p>
-                            </div>
-                            <div class="clear"></div>
+                                <div class="author-left">George Clooney</div>
+                                <div class="clear"></div>
+                                <div class="from-them">
+                                    <p>Checking out iOS7 you know..</p>
+                                </div>
+                                <div class="clear"></div>
 
-                            <div class="author-right">You</div>
-                            <div class="clear"></div>
-                            <div class="from-me">
-                                <p>Check out this bubble!</p>
-                            </div>
-                            <div class="clear"></div>
+                                <div class="author-right">You</div>
+                                <div class="clear"></div>
+                                <div class="from-me">
+                                    <p>Check out this bubble!</p>
+                                </div>
+                                <div class="clear"></div>
 
-                            <div class="author-left">George Clooney</div>
-                            <div class="clear"></div>
-                            <div class="from-them">
-                                <p>It's pretty cool!</p>
-                            </div>
-                            <div class="clear"></div>
+                                <div class="author-left">George Clooney</div>
+                                <div class="clear"></div>
+                                <div class="from-them">
+                                    <p>It's pretty cool!</p>
+                                </div>
+                                <div class="clear"></div>
 
-                            <div class="author-right">You</div>
-                            <div class="clear"></div>
-                            <div class="from-me">
-                                <p>Yeah it's pure CSS & HTML</p>
-                            </div>
-                            <div class="clear"></div>
+                                <div class="author-right">You</div>
+                                <div class="clear"></div>
+                                <div class="from-me">
+                                    <p>Yeah it's pure CSS & HTML</p>
+                                </div>
+                                <div class="clear"></div>
 
-                            <div class="author-left">George Clooney</div>
-                            <div class="clear"></div>
-                            <div class="from-them">
-                                <p>Wow that's impressive. But what's even more impressive is that this bubble is really high.</p>
-                            </div>
-                            <div class="clear"></div>
+                                <div class="author-left">George Clooney</div>
+                                <div class="clear"></div>
+                                <div class="from-them">
+                                    <p>Wow that's impressive. But what's even more impressive is that this bubble is really high.</p>
+                                </div>
+                                <div class="clear"></div>
 
-                            <div class="author-right">You</div>
-                            <div class="clear"></div>
-                            <div class="from-me">
-                                <p>Hey there! What's up?</p>
-                            </div>
-                            <div class="clear"></div>
+                                <div class="author-right">You</div>
+                                <div class="clear"></div>
+                                <div class="from-me">
+                                    <p>Hey there! What's up?</p>
+                                </div>
+                                <div class="clear"></div>
 
-                            <div class="author-left">George Clooney</div>
-                            <div class="clear"></div>
-                            <div class="from-them">
-                                <p>Checking out iOS7 you know..</p>
-                            </div>
-                            <div class="clear"></div>
+                                <div class="author-left">George Clooney</div>
+                                <div class="clear"></div>
+                                <div class="from-them">
+                                    <p>Checking out iOS7 you know..</p>
+                                </div>
+                                <div class="clear"></div>
 
-                            <div class="author-right">You</div>
-                            <div class="clear"></div>
-                            <div class="from-me">
-                                <p>Check out this bubble!</p>
-                            </div>
-                            <div class="clear"></div>
+                                <div class="author-right">You</div>
+                                <div class="clear"></div>
+                                <div class="from-me">
+                                    <p>Check out this bubble!</p>
+                                </div>
+                                <div class="clear"></div>
 
-                            <div class="author-left">George Clooney</div>
-                            <div class="clear"></div>
-                            <div class="from-them">
-                                <p>It's pretty cool!</p>
-                            </div>
-                            <div class="clear"></div>
+                                <div class="author-left">George Clooney</div>
+                                <div class="clear"></div>
+                                <div class="from-them">
+                                    <p>It's pretty cool!</p>
+                                </div>
+                                <div class="clear"></div>
 
-                            <div class="author-right">You</div>
-                            <div class="clear"></div>
-                            <div class="from-me">
-                                <p>Yeah it's pure CSS & HTML</p>
-                            </div>
-                            <div class="clear"></div>
+                                <div class="author-right">You</div>
+                                <div class="clear"></div>
+                                <div class="from-me">
+                                    <p>Yeah it's pure CSS & HTML</p>
+                                </div>
+                                <div class="clear"></div>
 
-                            <div class="author-left">George Clooney</div>
-                            <div class="clear"></div>
-                            <div class="from-them">
-                                <p>Wow that's impressive. But what's even more impressive is that this bubble is really high.</p>
+                                <div class="author-left">George Clooney</div>
+                                <div class="clear"></div>
+                                <div class="from-them">
+                                    <p>Wow that's impressive. But what's even more impressive is that this bubble is really high.</p>
+                                </div>
+                                <div class="clear"></div>
                             </div>
-                            <div class="clear"></div>
 
                             <div class="message-toolbar">
-                                <div class="row">
-                                    <div class="col-xs-6 text-left">
-                                        <a href="JavaScript:void(0);" title="Smileys">
+                                <div class="row no-margin-no-padding">
+                                    <div class="col-xs-6 text-left no-margin-no-padding">
+                                        <a href="JavaScript:void(0);" data-toggle="echat-popover-menu">
                                             <i class="fa fa-smile-o" aria-hidden="true"></i>
                                         </a>
-                                        <a href="JavaScript:void(0);" title="Send an image">
+                                        <a href="JavaScript:void(0);" data-toggle="echat-popover-menu">
                                             <i class="fa fa-picture-o" aria-hidden="true"></i>
                                         </a>
-                                        <a href="JavaScript:void(0);" title="Send a file">
+                                        <a href="JavaScript:void(0);" data-toggle="echat-popover-menu">
                                             <i class="fa fa-paperclip" aria-hidden="true"></i>
                                         </a>
                                     </div>
-                                    <div class="col-xs-6 text-right">
-                                        <a href="JavaScript:void(0);" title="Export conversation">
+                                    <div class="col-xs-6 text-right no-margin-no-padding">
+                                        <a href="JavaScript:void(0);" data-toggle="echat-popover-menu">
                                             <i class="fa fa-floppy-o" aria-hidden="true"></i>
                                         </a>
-                                        <a href="JavaScript:void(0);" title="Delete conversation">
+                                        <a href="JavaScript:void(0);" data-toggle="echat-popover-menu">
                                             <i class="fa fa-trash" aria-hidden="true"></i>
                                         </a>
-                                        <a href="JavaScript:void(0);" title="Settings">
+                                        <a href="JavaScript:void(0);" data-toggle="echat-popover-menu">
                                             <i class="fa fa-cogs" aria-hidden="true"></i>
                                         </a>
                                     </div>
@@ -212,10 +217,10 @@
                 <div class="row">
                     <div class="col-xs-6 text-left">
                         <div class="settings-toolbar">
-                            <a href="JavaScript:void(0);" title="Turn chat on/off">
+                            <a href="JavaScript:void(0);" data-toggle="echat-popover-menu">
                                 <i class="fa fa-power-off" aria-hidden="true"></i>
                             </a>
-                            <a href="JavaScript:void(0);" title="Volume settings">
+                            <a href="JavaScript:void(0);" data-toggle="echat-popover-menu">
                                 <i class="fa fa-volume-up" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -228,6 +233,39 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div id="smileys" style="display: none;">
+    <div class="spacer">
+        <a class="addEmote" data-emote=" !alien " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/alien.png" alt=""></a>
+        <a class="addEmote" data-emote=" !amazed " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/amazed.png" alt=""></a>
+        <a class="addEmote" data-emote=" !grr " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/angry.png" alt=""></a>
+        <a class="addEmote" data-emote=" !lol " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/biglaugh.png" alt=""></a>
+        <a class="addEmote" data-emote=" :D " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/cheesey.png" alt=""></a>
+        <a class="addEmote" data-emote=" :? " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/confused.png" alt=""></a>
+        <a class="addEmote" data-emote=" :(( " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/cry.png" alt=""></a>
+        <a class="addEmote" data-emote=" x) " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/dead.png" alt=""></a>
+        <a class="addEmote" data-emote=" !dodge " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/dodge.png" alt=""></a>
+        <a class="addEmote" data-emote=" :( " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/frown.png" alt=""></a>
+        <a class="addEmote" data-emote=" :@ " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/gah.png" alt=""></a>
+        <a class="addEmote" data-emote=" :D " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/grin.png" alt=""></a>
+        <a class="addEmote" data-emote=" !heart " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/heart.png" alt=""></a>
+        <a class="addEmote" data-emote=" :! " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/idea.png" alt=""></a>
+        <a class="addEmote" data-emote=" !ill " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/ill.png" alt=""></a>
+        <a class="addEmote" data-emote=" ~:( " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/mad.png" alt=""></a>
+        <a class="addEmote" data-emote=" !mistrust " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/mistrust.png" alt=""></a>
+        <a class="addEmote" data-emote=" :| " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/neutral.png" alt=""></a>
+        <a class="addEmote" data-emote=" ?! " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/question.png" alt=""></a>
+        <a class="addEmote" data-emote=" B) " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/rolleyes.png" alt=""></a>
+        <a class="addEmote" data-emote=" !sad " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/sad.png" alt=""></a>
+        <a class="addEmote" data-emote=" 8) " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/shades.png" alt=""></a>
+        <a class="addEmote" data-emote=" !shy " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/shy.png" alt=""></a>
+        <a class="addEmote" data-emote=" :) " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/smile.png" alt=""></a>
+        <a class="addEmote" data-emote=" %-6 " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/special.png" alt=""></a>
+        <a class="addEmote" data-emote=" :O " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/suprised.png" alt=""></a>
+        <a class="addEmote" data-emote=" :p " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/tongue.png" alt=""></a>
+        <a class="addEmote" data-emote=" ;) " href="#"><img src="http://e107hungary.org/e107_images/emotes/default/wink.png" alt=""></a>
     </div>
 </div>
 
@@ -282,6 +320,8 @@
 <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <!-- Automatically adjust textarea height based on user input. -->
 <script type="text/javascript" src="vendor/jquery.ns-autogrow/jquery.ns-autogrow.min.js"></script>
+<!-- Perfect-Scrollbar JS. -->
+<script type="text/javascript" src="vendor/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
 <!-- Custom JavaScript. -->
 <script type="text/javascript" src="js/scripts.js"></script>
 
